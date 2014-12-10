@@ -12,7 +12,13 @@ curldrop is built on top of Python 3, Flask, Tornado and SQLite. Make sure you i
 sudo pip3 install flask tornado
 ```
 
-Make sure you edit the **config.py** file to you match your preferences.
+Clone this Rrpository to your server:
+
+```
+git clone https://github.com/kevvvvv/curldrop.git
+```
+
+Make sure you edit the **config.py** file to you match your preferences. The SQLite database file will be created for you.
 
 To start curldrop, make runcurldrop.py executable and run it:
 
