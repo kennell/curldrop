@@ -32,7 +32,7 @@ def index():
 # Catch a incoming PUT request
 @app.route('/<userfile>', methods=['PUT'])
 def upload(userfile):
-	if length(request.data) > app.config['MAXSIZE']:
+	if len(request.data) > app.config['MAXSIZE']:
 		abort(400, "Filesize exceeds " + app.config['MAXSIZE'] + " bytes.")
 
 	file_id = str(uuid4())[:8]
@@ -64,14 +64,18 @@ def init_db():
 
 # Connect to SQLite database
 def connect_db():
-	if not isfile(app.config['DATABASE']):
-		init_db()
 	return sqlite3.connect(app.config['DATABASE'])
 
 # Helpers
 # Remove expired files from the upload directory
 def remove_expired():
-	return
+	now = int(datetime.now().timestamp())
+	cur = g.db.execute('SELECT file_id, timestamp FROM files')
+	for row in cur.fetchall():
+		if (now - row[1]) > app.config['EXPIRES']:
+				remove(app.config['UPLOADDIR'] + row[0])
+				rem = g.db.execute('DELETE FROM files WHERE file_id = ?	', [row[0]])
+				g.db.commit()
 
 # Check if file exists and returns original upload name
 def checkfile(file_id):
