@@ -33,7 +33,7 @@ def index():
 @app.route('/<userfile>', methods=['PUT'])
 def upload(userfile):
 	if len(request.data) > app.config['MAXSIZE']:
-		abort(400, "Filesize exceeds " + app.config['MAXSIZE'] + " bytes.")
+		return "Filesize exceeds " + str(app.config['MAXSIZE']) + " bytes."
 
 	file_id = str(uuid4())[:8]
 	cur = g.db.execute('INSERT INTO files (file_id, timestamp, ip, originalname) VALUES (?, ?, ?, ?)', 
