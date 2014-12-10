@@ -23,23 +23,21 @@ chmod +x runcurldrop.py
 
 Congrats! curldrop should now be up and running! 
 
-
 Usage
 -----
 
 You can now upload files to your curldrop, here are some basic examples. 
 
-Upload a single file:
+Upload a single file to your curldrop instance:
 ```
 curl --upload-file myfile.jpg mycurldropserver.com
 ```
 
 Upload multiple files:
 ```
-curl -T "{path/to/file1,path/to/file2}" chunk.io
+curl -T "{path/to/file1,path/to/file2}" mycurldropserver.com
 ```
 
-Protips: 
+Hints: 
 * the '-T' flag is equal to --upload-file.
 * add -s to hide the progress bar
-
