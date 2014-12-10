@@ -36,7 +36,7 @@ def upload(userfile):
 		return "Filesize exceeds " + str(app.config['MAXSIZE']) + " bytes."
 
 	file_id = str(uuid4())[:8]
-	cur = g.db.execute('INSERT INTO files (file_id, timestamp, ip, originalname) VALUES (?, ?, ?, ?)', 
+	g.db.execute('INSERT INTO files (file_id, timestamp, ip, originalname) VALUES (?, ?, ?, ?)', 
 		[file_id, str(int(datetime.now().timestamp())), request.remote_addr, secure_filename(userfile)])
 	g.db.commit()
 	fo = open(app.config['UPLOADDIR'] + file_id, "wb")
@@ -74,7 +74,7 @@ def remove_expired():
 	for row in cur.fetchall():
 		if (now - row[1]) > app.config['EXPIRES']:
 				remove(app.config['UPLOADDIR'] + row[0])
-				rem = g.db.execute('DELETE FROM files WHERE file_id = ?	', [row[0]])
+				g.db.execute('DELETE FROM files WHERE file_id = ?	', [row[0]])
 				g.db.commit()
 
 # Check if file exists and returns original upload name
