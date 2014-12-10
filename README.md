@@ -41,7 +41,7 @@ curl --upload-file myfile.jpg mycurldropserver.com
 
 Upload multiple files:
 ```
-curl -T "{path/to/file1,path/to/file2}" mycurldropserver.com
+curl --upload-file "{path/to/file1,path/to/file2}" mycurldropserver.com
 ```
 
 Hints: 
