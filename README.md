@@ -1,7 +1,7 @@
 curldrop
 ========
 
-curldrop is a simple (less than 100 LOC) web application that allows you to upload files straight from the terminal with curl. It is inspired by great services like <a href="http://curl.io/">curl.io</a>, <a href="http://chunk.io/">chunk.io</a> and <a href="https://transfer.sh/">transfer.sh.</a>
+curldrop is a simple (less than 100 LOC) web application that allows you to upload files straight from your Terminal with curl. It is inspired by great services like <a href="http://curl.io/">curl.io</a>, <a href="http://chunk.io/">chunk.io</a> and <a href="https://transfer.sh/">transfer.sh.</a>
 
 Install
 -------
@@ -12,7 +12,7 @@ curldrop is built on top of Python 3, Flask, Tornado and SQLite. Make sure you i
 sudo pip3 install flask tornado
 ```
 
-Clone this Rrpository to your server:
+Clone this Repository to your server:
 
 ```
 git clone https://github.com/kevvvvv/curldrop.git
@@ -45,5 +45,5 @@ curl -T "{path/to/file1,path/to/file2}" mycurldropserver.com
 ```
 
 Hints: 
-* the '-T' flag is equal to --upload-file.
-* add -s to hide the progress bar
+* the '-T' flag is equal to '--upload-file'
+* add '-s' to hide the progress bar
