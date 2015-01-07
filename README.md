@@ -3,6 +3,8 @@ curldrop
 
 curldrop is a simple (less than 100 LOC) web application that allows you to upload files straight from your Terminal with curl. It is inspired by great services like <a href="http://curl.io/">curl.io</a>, <a href="http://chunk.io/">chunk.io</a> and <a href="https://transfer.sh/">transfer.sh.</a>
 
+**curldrop is functional but lacks some extended features, such as file management or password protection for files. Feel free to send Pull requests.**
+
 Install
 -------
 
