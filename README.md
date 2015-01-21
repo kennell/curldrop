@@ -5,6 +5,8 @@ curldrop is a simple (less than 100 LOC) web application that allows you to uplo
 
 **curldrop is functional but lacks some extended features, such as file management or password protection for files. Feel free to send Pull requests.**
 
+![curldrop in action](http://i.imgur.com/m5gTar1.jpg)
+
 Install
 -------
 
