@@ -16,13 +16,19 @@ from .server import StandaloneServer
     help='Directory where uploads are stored, if not specified the current working directory will be used'
 )
 @click.option(
-    '--url',
-    default="http://www.example.com/",
+    '--baseurl',
+    default=None,
     help='Base URL, e.g. http://www.example.com/'
 )
-def main(port, upload_dir, url):
+def main(port, upload_dir, baseurl):
+    if baseurl is None:
+        baseurl = "http://www.example.com/"
+        click.echo(
+            click.style('You did not specify a Base URL, using default: http://www.example.com/', fg='yellow')
+        )
+
     app.config['UPLOAD_DIR'] = upload_dir
-    app.config['BASE_URL'] = url
+    app.config['BASE_URL'] = baseurl
 
     server_options = {
         'bind': '{ip}:{port}'.format(
