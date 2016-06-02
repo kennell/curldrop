@@ -18,13 +18,13 @@ from .server import StandaloneServer
 @click.option(
     '--baseurl',
     default=None,
-    help='Base URL, e.g. http://www.example.com/'
+    help='Base URL, e.g. http://example.com/'
 )
 def main(port, upload_dir, baseurl):
     if baseurl is None:
-        baseurl = "http://www.example.com/"
+        baseurl = 'http://{host}:{port}/'.format(host='localhost', port=port)
         click.echo(
-            click.style('You did not specify a Base URL, using default: http://www.example.com/', fg='yellow')
+            click.style('You did not specify a Base URL, using default: ' + baseurl, fg='yellow')
         )
 
     app.config['UPLOAD_DIR'] = upload_dir
