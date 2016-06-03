@@ -1,37 +1,25 @@
 curldrop
 ========
 
-curldrop is a simple (less than 100 LOC) web application that allows you to upload files straight from your Terminal with curl. It is inspired by great services like <a href="http://curl.io/">curl.io</a>, <a href="http://chunk.io/">chunk.io</a> and <a href="https://transfer.sh/">transfer.sh.</a>
+curldrop is a simple (less than 100 LOC) web app that allows you to upload files straight from your terminal with curl. It is inspired by services like [curl.io](http://curl.io/) and [Transfer.sh](https://transfer.sh/).
 
-**curldrop is functional but lacks some extended features, such as file management or password protection for files. Feel free to send Pull requests.**
+Simply start the curldrop app...
 
-![curldrop in action](http://i.imgur.com/m5gTar1.jpg)
+![Start curldrop](http://i.imgur.com/MgLTPhN.gif)
+
+... and start upload files with curl:
+
+![Upload a file to curldrop](http://i.imgur.com/sLe5BwG.gif)
 
 Install
 -------
 
-curldrop is built on top of Python 3, Flask, Tornado and SQLite. Make sure you install the following dependencies:
+Install via pip:
 
 ```
-sudo pip3 install flask tornado
+pip install curldrop
 ```
 
-Clone this Repository to your server:
-
-```
-git clone https://github.com/kevvvvv/curldrop.git
-```
-
-Make sure you edit the **config.py** file to you match your preferences. The SQLite database file will be created for you.
-
-To start curldrop, make runcurldrop.py executable and run it:
-
-```
-chmod +x runcurldrop.py
-./runcurldrop.py
-```
-
-Congrats! curldrop should now be up and running! 
 
 Usage
 -----
@@ -40,14 +28,12 @@ You can now upload files to your curldrop, here are some basic examples.
 
 Upload a single file to your curldrop instance:
 ```
-curl --upload-file myfile.jpg mycurldropserver.com
+curl --upload-file myfile.jpg example.com
 ```
 
 Upload multiple files:
+
 ```
-curl --upload-file "{path/to/file1,path/to/file2}" mycurldropserver.com
+curl --upload-file "{path/to/file1,path/to/file2}" example.com
 ```
 
-Hints: 
-* the '-T' flag is equal to '--upload-file'
-* add '-s' to hide the progress bar
