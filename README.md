@@ -5,11 +5,11 @@ curldrop is a simple (less than 100 LOC) web app that allows you to upload files
 
 Simply start the curldrop service...
 
-![Start curldrop](http://i.imgur.com/MgLTPhN.gif)
+![Start curldrop](http://i.imgur.com/3mSle1Z.gif)
 
 ... and start uploading files with curl:
 
-![Upload a file to curldrop](http://i.imgur.com/sLe5BwG.gif)
+![Upload a file to curldrop](http://i.imgur.com/cxV9gTH.gif)
 
 Install and run
 -------
