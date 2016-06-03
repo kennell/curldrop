@@ -31,5 +31,4 @@ def download(uuid):
                 as_attachment=True,
                 attachment_filename=file.split('-', 1)[1]
             )
-    else:
-        return abort(404)
+    return abort(404)
