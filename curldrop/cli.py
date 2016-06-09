@@ -36,6 +36,8 @@ def main(port, upload_dir, baseurl):
             port=port
         ),
         'workers': 4,
+        'accesslog': '-',
+        'errorlog': '-'
     }
     StandaloneServer(app, server_options).run()
 
