@@ -1,7 +1,9 @@
-curldrop
-========
+⏫ curldrop
+==========
 
 curldrop is a simple (less than 100 LOC) web app that allows you to upload files straight from your terminal with curl. It is inspired by services like [curl.io](http://curl.io/) and [Transfer.sh](https://transfer.sh/).
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/077529df0b80d8759542/maintainability)](https://codeclimate.com/github/kennell/curldrop/maintainability)
 
 Simply start the curldrop service...
 
