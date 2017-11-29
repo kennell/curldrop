@@ -24,7 +24,7 @@ pip install curldrop
 
 You can now run curldrop:
 
-````
+```
 Usage: curldrop [OPTIONS]
 
 Options:
