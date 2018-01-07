@@ -5,6 +5,18 @@ curldrop is a simple (less than 100 LOC) web app that allows you to upload files
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/077529df0b80d8759542/maintainability)](https://codeclimate.com/github/kennell/curldrop/maintainability)
 
+
+## Donations
+
+Your contribution keeps this project going ❤️ 
+
+* BTC 121QcrzmFsYfxpJYneTS4N6yKDdU8GGfXa
+* ETH 0x56Aab3cDA7Ea02953aE394F9ffA3f7b80ed8b6DE
+* LTC LerFT8YP7Q9etp2M3EsJxLZJYeFCZLV6wQ
+
+## Get started
+
+
 Simply start the curldrop service...
 
 ![Start curldrop](http://i.imgur.com/3mSle1Z.gif)
