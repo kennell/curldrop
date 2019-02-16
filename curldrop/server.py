@@ -1,6 +1,7 @@
 from gunicorn.app.base import BaseApplication
 from gunicorn.six import iteritems
 
+
 class StandaloneServer(BaseApplication):
 
     def __init__(self, app, options=None):
