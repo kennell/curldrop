@@ -26,13 +26,21 @@ pip install curldrop
 You can now run curldrop:
 
 ```
+curldrop
+```
+
+There are also some additional options:
+
+```
 Usage: curldrop [OPTIONS]
 
 Options:
   --port INTEGER     Port to listen on, default is 8000
   --upload-dir TEXT  Directory where uploads are stored, if not specified the
                      current working directory will be used
-  --baseurl TEXT     Base URL, e.g. http://example.com/
+  --baseurl TEXT     Base URL, e.g. http://example.com:8000/
+  --timeout INTEGER  Number of seconds before a worker will timeout
+  --workers INTEGER  Number of workers
   --help             Show this message and exit.
 ```
 
