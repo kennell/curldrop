@@ -21,7 +21,7 @@ from .server import StandaloneServer
     help='Base URL, e.g. http://example.com/'
 )
 def main(port, upload_dir, baseurl):
-    if baseurl is None:
+    if not baseurl:
         baseurl = 'http://{host}:{port}/'.format(host='localhost', port=port)
         click.echo(
             click.style('You did not specify a Base URL, using default: ' + baseurl, fg='yellow')
