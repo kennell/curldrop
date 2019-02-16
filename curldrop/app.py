@@ -1,7 +1,7 @@
+import os
 from flask import Flask, abort, request, send_file
 from werkzeug.utils import secure_filename
 from uuid import uuid4
-import os
 
 
 app = Flask(__name__)

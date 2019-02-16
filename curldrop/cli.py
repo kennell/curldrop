@@ -1,7 +1,7 @@
 import click
 import os
-from .app import app
-from .server import StandaloneServer
+from curldrop.app import app
+from curldrop.server import StandaloneServer
 
 
 @click.command()
@@ -18,9 +18,19 @@ from .server import StandaloneServer
 @click.option(
     '--baseurl',
     default=None,
-    help='Base URL, e.g. http://example.com/'
+    help='Base URL, e.g. http://example.com:8000/'
 )
-def main(port, upload_dir, baseurl):
+@click.option(
+    '--timeout',
+    default=30,
+    help='Number of seconds before a worker will timeout'
+)
+@click.option(
+    '--workers',
+    default=4,
+    help='Number of workers'
+)
+def main(port, upload_dir, baseurl, timeout, workers):
     if not baseurl:
         baseurl = 'http://{host}:{port}/'.format(host='localhost', port=port)
         click.echo(
@@ -35,9 +45,10 @@ def main(port, upload_dir, baseurl):
             ip='0.0.0.0',
             port=port
         ),
-        'workers': 4,
+        'workers': workers,
         'accesslog': '-',
-        'errorlog': '-'
+        'errorlog': '-',
+        'timeout': timeout
     }
     StandaloneServer(app, server_options).run()
 
