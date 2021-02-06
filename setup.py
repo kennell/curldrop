@@ -8,6 +8,6 @@ setup(
     author_email="kevin@kennell.de",
     license="MIT",
     url="http://github.com/kennell/curldrop",
-    install_requires=["flask", "click", "gunicorn"],
+    install_requires=["flask", "click", "gunicorn", "six"],
     entry_points={"console_scripts": ["curldrop = curldrop.cli:main"]},
 )

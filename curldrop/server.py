@@ -1,5 +1,5 @@
 from gunicorn.app.base import BaseApplication
-from gunicorn.six import iteritems
+from six import iteritems
 
 
 class StandaloneServer(BaseApplication):

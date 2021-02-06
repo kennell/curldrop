@@ -1,3 +1,4 @@
-flask
 click
+flask
 gunicorn
+six
