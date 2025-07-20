@@ -3,6 +3,10 @@
 
 curldrop is a simple (less than 100 LOC) web app that allows you to upload files straight from your terminal with curl. It is inspired by services like [Transfer.sh](https://transfer.sh/).
 
+*Sponsored by:*
+
+[![VPN Detection](focsec.png)](https://focsec.com)
+
 ## Get started
 
 
